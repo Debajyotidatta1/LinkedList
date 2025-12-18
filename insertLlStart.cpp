@@ -18,17 +18,23 @@ int main(){
     Node *head;
     head = nullptr;
     for(int i=0; i<4; i++){
-        Node *temp;
-        temp = new Node(arr[i]);
+        
         if(head == NULL){
-            head = temp;
+            head = new Node(arr[i]);
         }else{
+            Node *temp;
+            temp = new Node(arr[i]);
             temp->next = head;
             head = temp;
         }
     }
     
-    while()
+    Node *temp;
+    temp=head;
+    while(temp!=nullptr){
+        cout<<temp->data<<" ";
+        temp = temp->next;
+    }
 
     return 0;
 }
